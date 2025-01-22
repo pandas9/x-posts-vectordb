@@ -91,7 +91,7 @@ export default function CTA() {
     // Implement your search logic here
     console.log("Searching for:", searchTerm);
     const results = await searchPosts(searchTerm);
-    setSearchResults(results);
+    setSearchResults(results ? results : []);
     setIsLoading(false);
   }, []);
 
